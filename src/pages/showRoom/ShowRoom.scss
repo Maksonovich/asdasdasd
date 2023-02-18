@@ -1,75 +1,103 @@
 .showroom-title {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .title {
-    font-weight: normal;
-    font-size: 21px;
-    line-height: 20px;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 19px;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 19px;
 }
 
 .showroomtitles {
-    font-family: "HelveticaNeueCyr", sans-serif;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 220%;
-    letter-spacing: 0.03em;
-    color: #171717;
-    width: 50%;
-    padding: 0 15px;
-    text-align: justify;
-    margin-top: 0 !important;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 220%;
+  letter-spacing: 0.03em;
+  color: #171717;
+  width: 50%;
+  padding: 0 15px;
+  text-align: justify;
+  margin-top: 0 !important;
+  @media(max-width: 1283px) {
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 .allTitlesabout {
-    margin: 80px;
-    display: flex;
-    gap: 50px;
+  margin: 80px;
+  display: flex;
+  gap: 50px;
+  @media(max-width:1283px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
 }
 
 .lishki {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 20px;
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 20px;
 }
 
 .headervideo {
-    text-align: center;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #272727;
-    margin: 5%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #272727;
+  margin: 5%;
 }
 
 .reactPlayers {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    min-width: 100%;
-    gap: 20px;
-    overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  min-width: 100%;
+  gap: 20px;
+  overflow: scroll;
 }
 
 .querstion {
-    margin: 6%;
+  margin: 6%;
 }
 
 .imgs {
-    max-width: 60%;
-    display: flex;
-    flex-direction: row;
+  max-width: 60%;
+  display: flex;
+  flex-direction: row;
+  @media(max-width: 1283px) {
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    gap: 15px;
+  }
+  & img {
+    @media (max-width: 1383px) {
+      width: 343px;
+    }
+  }
 }
 
 .secondImg {
-    transform: translateY(40px);
+  transform: translateY(40px);
+  @media(max-width: 1383px) {
+    transform: translateY(0);
+  }
 }
 
 .fristImg {
-    transform: translateY(20px);
+  transform: translateY(20px);
+  @media(max-width: 1383px) {
+    transform: translateY(0);
+  }
 }

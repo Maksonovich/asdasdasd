@@ -1,6 +1,9 @@
 .goots {
     padding-top: 60px;
     padding-left: 105px;
+    @media(max-width:1383px) {
+      padding-left: 0;
+    }
     margin: 0;
     &__h1 {
       position: relative;
@@ -23,6 +26,10 @@
     }
     &__blok {
       display: flex;
+      @media(max-width:1383px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
     &__img {
       width: 260px;
@@ -62,6 +69,9 @@
       background-size: 669px 517px;
       height: 517px;
       background-repeat: no-repeat;
+      @media(max-width:1357px) {
+        display: none;
+      }
       &-title {
         padding-top: 55px;
         padding-left: 275px;
@@ -114,6 +124,9 @@
       height: 516px;
       background-repeat: no-repeat;
       margin-bottom: 78px;
+      @media(max-width:1357px) {
+        display: none;
+      }
       &-title {
         color: #fff;
         font-family: "FuturaBookC";
@@ -198,11 +211,18 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @media(max-width:1091px) {
+      flex-direction: column;
+      align-items: center;
+    }
     &__left {
       width: 753px;
       max-width: 100%;
       position: relative;
       padding-left: 150px;
+      @media(max-width:1317px) {
+        padding: 0;
+      }
       &-navs {
         position: absolute;
         left: 0;
@@ -210,6 +230,9 @@
         margin: 0 !important;
         width: 100px;
         z-index: 2;
+        @media(max-width:1317px) {
+          display: none;
+        }
         &_item {
           outline: none;
           & a {
@@ -236,6 +259,9 @@
           width: 100%;
           margin: 0 !important;
           scroll-behavior: smooth;
+          @media(max-width:1117px) {
+            height: 300px;
+          }
           &::-webkit-scrollbar {
             display: none;
           }
@@ -246,6 +272,10 @@
                 max-width: 100%;
                 height: auto;
                 border-style: none;
+                @media(max-width:1317px) {
+                  margin: 0 auto;
+                  height: 300px;
+                }
               }
             }
           }
