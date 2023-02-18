@@ -24,6 +24,14 @@
         justify-content: center;
         margin-top: 38px;
         border: 0.1px solid #D1B59A;
+        @media(max-width:1211px) {
+            margin: 21px auto 46px;
+            max-width: 100%;
+            width: 550px;
+            border-right: none;
+            border-left: none;
+            justify-content: space-between;
+        }
         &-li {
             color: #D1B59A;
             font-size: 13px;
@@ -32,9 +40,19 @@
         }
         &-il {
             border-left: 1px solid #D1B59A;
-            padding: 9px 55px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 30px;
+            width: 178px;
+            @media(max-width:1211px) {
+                width: 33.333%;
+            }
             &:nth-child(3) {
                 border-right: 1px solid #D1B59A;
+                @media(max-width:1211px) {
+                    width: 33.333%;
+                }
             }
             &:hover {
                 background-color: #D1B59A;
@@ -51,6 +69,14 @@
         padding: 49px 0;
         align-items: center;
         position: relative;
+        @media(max-width:1252px) {
+            flex-direction: column;
+        }
+        &-img {
+            @media(max-width:1252px) {
+                display: none;
+            }
+        }
         &-two {
             display: flex;
             flex-wrap: wrap;
@@ -110,11 +136,17 @@
             position: absolute;
             bottom: 18.4rem;
             right: 0;
+            @media(max-width:1252px) {
+                display: none;
+            }
         }
         &-span_second {
             position: absolute;
             bottom: 11.7rem;
             right: 0;
+            @media(max-width: 1252px) {
+                display: none;
+            }
         }
     }
     &__questions {
@@ -123,7 +155,10 @@
             border: 1px solid #D1B59A;
             border-style: dashed;
             padding: 37px 221px 45px;
-            background-color: #fff;
+            @media(max-width: 1084px) {
+                padding: 12px 0;
+                border: none;
+            }
         }
         &-icon {
             display: block;
@@ -141,12 +176,19 @@
             margin-top: 35px;
             display: flex;
             flex-wrap: wrap;
+            @media(max-width:1084px) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         &-object {
             position: relative;
             width: 33.3333%;
             margin-bottom: 20px;
             border: 1px solid #000000;
+            @media (max-width:1084px) {
+                width: 100%;
+            }
             &::after {
                 content: '*';
                 font-weight: 500;
@@ -188,6 +230,9 @@
                 font-weight: 500;
                 font-size: 13px;
                 text-transform: uppercase;
+                @media(max-width: 1084px) {
+                    width: 100%;
+                }
             }
         }
         &-btn {
@@ -208,9 +253,15 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             transition: all 0.3s ease-in;
+            @media(max-width:1084px) {
+                border-top: none;
+                margin-left: auto;
+                border-left: 1px solid #000;
+            }
             &:hover {
                 background-color: #000000;
                 color: #fff;
+                border-left: 1px solid #000;
             }
         }
     }
