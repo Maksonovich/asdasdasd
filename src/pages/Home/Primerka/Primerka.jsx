@@ -16,21 +16,23 @@ const Primerka = () => {
   return (
     <section className='Primerka'>
         <div className="container">
-            <div className="Primerka_inner">
+            <form>
+                <div className="Primerka_inner">
                 <div className='PrimerkaIcon'>
                     <img  src={PrimerkaIcon} alt="" />
                 </div>
                 <h1>ЗАПИСАТЬСЯ НА ПРИМЕРКУ В ШОУРУМЕ</h1>
                 <div className="Primerka_input_row1">
-                    <input  onChange={(e) => setName(e.target.value)} value={name}  className='Primerka_input' type="text" placeholder=' ВВЕДИТЕ ИМЯ' />
-                    <input  onChange={(e) => setPhone(e.target.value)} value={phone}  className='Primerka_input1' type="text" placeholder='ВВЕДИТЕ ТЕЛЕФОН' />
-                    <input  onChange={(e) => setTime(e.target.value)} value={time}  className='Primerka_input2' type="text" placeholder='ВВЕДИТЕ УДОБНОЕ ВРЕМЯ' />
+                    <input  onChange={(e) => setName(e.target.value)} value={name}  className='Primerka_input' type="text" placeholder=' ВВЕДИТЕ ИМЯ' required/>
+                    <input  onChange={(e) => setPhone(e.target.value)} value={phone}  className='Primerka_input1' type="text" placeholder='ВВЕДИТЕ ТЕЛЕФОН' required/>
+                    <input  onChange={(e) => setTime(e.target.value)} value={time}  className='Primerka_input2' type="text" placeholder='ВВЕДИТЕ УДОБНОЕ ВРЕМЯ' required/>
                 </div>
                 <div className="Primerka_input_row2">
                     <input  onChange={(e) => setComment(e.target.value)} value={comment} className='Primerka_input_coment' type="text" placeholder='ДОБАВИТЬ КОММЕНТАРИЙ' />
-                    <button onClick={f2} className='Primerka_button'> ОТПРАВИТЬ </button>
+                    <button onClick={f2} className='Primerka_button' type='submit'> ОТПРАВИТЬ </button>
                 </div>
             </div>
+            </form>
         </div>
     </section>
     
