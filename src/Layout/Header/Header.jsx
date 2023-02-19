@@ -202,16 +202,6 @@ const Header = () => {
               onClick={() => changeCategory("novelties")}
               href="#"
             >
-              SALE
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="Catalog"
-              className="header__nav-bottom_link"
-              onClick={() => changeCategory("novelties")}
-              href="#"
-            >
               НОВИНИКИ
             </Link>
           </li>
@@ -225,9 +215,13 @@ const Header = () => {
             </Link>{" "}
           </li>
           <li>
-            <a className="header__nav-bottom_link" href="#">
+            <Link 
+            className="header__nav-bottom_link"
+            to='/Catalog'
+            onClick={() => changeCategory("Autumn-winter 20-21")}
+            >
               НАШИ КОЛЛЕКЦИИ
-            </a>{" "}
+            </Link>{" "}
           </li>
           <li>
             <Link to="Review" className="header__nav-bottom_link" href="#">

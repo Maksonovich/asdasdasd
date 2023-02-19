@@ -73,7 +73,7 @@ const Modal27 = ({Product}) => {
                         </div>
                         <div className='md27__btn'>
                             <Link onClick={() => setAidar3(!aidar3)} className='md27__btn-first btn'>ПРОДОЛЖИТЬ ПОКУПКИ</Link>
-                            <Link to="/" className='md27__btn-second btn'>ПЕРЕЙТИ К ОФОРМЛЕНИЮ</Link>
+                            <Link to="/Decoration" onClick={() => setAidar3(!aidar3)} className='md27__btn-second btn'>ПЕРЕЙТИ К ОФОРМЛЕНИЮ</Link>
                         </div>
                     </div>
                 </div>
