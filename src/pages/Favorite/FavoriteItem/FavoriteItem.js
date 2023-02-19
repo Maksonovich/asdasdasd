@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { MakeAdd } from "../../../redux/reducers/dataCrad";
 
 const FavoriteItem = ({ product }) => {
 
-
   const [hide, setHide] = useState(true)
+  const dispatch = useDispatch() 
 
   return (
     hide && <div className="favoriteItem">
@@ -24,7 +27,7 @@ const FavoriteItem = ({ product }) => {
           placeholder="ДОБАВИТЬ КОММЕНТАРИЙ"
         ></textarea>
         <div className="favoriteItem__second-links">
-          <a className="favoriteItem__second-links_btn">Купить</a>
+          <Link to="/MakeAnOrder" onClick={() => dispatch(MakeAdd('makeOrder', product))} className="favoriteItem__second-links_btn">Купить</Link>
           <a className="favoriteItem__second-links_btn2" onClick={() => setHide(!hide)}>Удалить</a>
         </div>
       </div>

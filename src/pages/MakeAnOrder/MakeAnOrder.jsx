@@ -17,7 +17,7 @@ import Modal28 from "../modal/modal28";
 import Modal27 from "../modal/modal27";
 import Modal25 from "../modal/modal25";
 import { useDispatch } from "react-redux";
-import { setBasket } from "../../redux/reducers/dataCrad";
+import { setBasket, setFavorites } from "../../redux/reducers/dataCrad";
 
 const MakeAnOrder = ({products}) => {
   const dispatch = useDispatch()
@@ -88,7 +88,7 @@ const MakeAnOrder = ({products}) => {
           <div className="cardList__rigth">
             <div className="cardList__rigth-top">
               <h2>{products.title}</h2>
-              <div></div>
+              <div onClick={() => dispatch(setFavorites("favorite", products))}></div>
             </div>
             <div className="cardList__rigth-price">{products.price} ₽</div>
             <div className="cardList__rigth-size">
