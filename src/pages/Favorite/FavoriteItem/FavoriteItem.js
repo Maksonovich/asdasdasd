@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const FavoriteItem = ({ product }) => {
 
+
+  const [hide, setHide] = useState(true)
+
   return (
-    <div className="favoriteItem">
+    hide && <div className="favoriteItem">
       <div className="favoriteItem__first">
         <a href="#">
           <img src={product.img} alt="img" />
@@ -23,7 +26,7 @@ const FavoriteItem = ({ product }) => {
         ></textarea>
         <div className="favoriteItem__second-links">
           <a className="favoriteItem__second-links_btn">Купить</a>
-          <a className="favoriteItem__second-links_btn2">Удалить</a>
+          <a className="favoriteItem__second-links_btn2" onClick={() => setHide(!hide)}>Удалить</a>
         </div>
       </div>
     </div>
