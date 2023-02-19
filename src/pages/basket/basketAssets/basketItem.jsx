@@ -13,7 +13,7 @@ const BasketItem = ({ item }) => {
     <div className="basketItem" key={item.id}>
       <div className="basketItem__items">
         <div className="basketItem__img">
-          <img src={item.image} alt="some image" />
+          <img src={item.img} alt="some image" />
         </div>
         <div className="basketItem__info">
           <div className="basketItem__info-top">

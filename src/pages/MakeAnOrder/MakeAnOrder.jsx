@@ -16,8 +16,11 @@ import { CustomContext } from "../../utils/context";
 import Modal28 from "../modal/modal28";
 import Modal27 from "../modal/modal27";
 import Modal25 from "../modal/modal25";
+import { useDispatch } from "react-redux";
+import { setBasket } from "../../redux/reducers/dataCrad";
 
 const MakeAnOrder = ({products}) => {
+  const dispatch = useDispatch()
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
   const { aidar, setAidar} = useContext(CustomContext)
@@ -142,7 +145,7 @@ const MakeAnOrder = ({products}) => {
               </div>
             </div>
             <div className="cardList__rigth-buttons">
-              <a onClick={() => setAidar3(!aidar3)} className="cardList__rigth-buttons_big">
+              <a onClick={() => setAidar3(!aidar3) || dispatch(setBasket( "task", products))} className="cardList__rigth-buttons_big">
                 Добавить в корзину
               </a>
               <div className="cardList__rigth-buttons_flex">

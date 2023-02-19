@@ -20,6 +20,7 @@ const Basket = () => {
                 <div className='basket__content-line'></div>
                 <div className='basket__content-x' onClick={() => setBasket(!basket)}></div>
             </div>
+            <div className='basket__content-optom'><h4>Только оптом по 3 штуки!!!</h4></div>
             {task.length !== 0 ?
                 task.map((item) => (
                     <BasketItem item={item} />

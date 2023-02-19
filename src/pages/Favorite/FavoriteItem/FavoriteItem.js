@@ -19,7 +19,6 @@ const FavoriteItem = ({ product }) => {
       <div className="favoriteItem__second">
         <textarea
           className="favoriteItem__second-textarea"
-          name=""
           cols="30"
           rows="10"
           placeholder="ДОБАВИТЬ КОММЕНТАРИЙ"
