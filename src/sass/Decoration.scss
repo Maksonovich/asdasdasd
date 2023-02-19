@@ -1,0 +1,176 @@
+.makingItem {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &-link {
+    width: 80px;
+    min-width: 80px;
+    height: 100px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    outline: none;
+    margin-right: 14px;
+    & img {
+      width: 100%;
+    }
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    &-title {
+      outline: none;
+      display: inline-block;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 20px;
+      color: #242424;
+      margin-right: auto;
+    }
+    &-img {
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      cursor: pointer;
+      outline: none;
+      display: block;
+      transition: all 0.4s;
+      & img {
+        width: 100%;
+        filter: brightness(0) opacity(0.3);
+      }
+    }
+    &-price {
+      font-family: "FuturaBookC";
+      margin: 0 34px 0 52px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &-select {
+      position: relative;
+      margin-right: 38px;
+      user-select: none;
+      &_top {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 135px;
+        border: 1px solid #dadada;
+        padding: 0 10px;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        &-size {
+          font-family: "FuturaBookC";
+          font-weight: normal;
+          font-size: 17px;
+          line-height: 23px;
+          color: #b8b8b8;
+          display: flex;
+          align-items: center;
+          transition: all 0.4s;
+        }
+        &-img {
+          width: 17px;
+          height: 8.5px;
+          background-size: 17px 8.5px;
+          background-image: url("https://eleanboutique.ru/catalog/view/theme/default/assets/img/select-arrow.svg");
+          transition: all 0.4s;
+        }
+      }
+      &_list {
+        transform: scale(0) translateY(-21px);
+        transform-origin: 50% 0;
+        transition: all 0.4s;
+        background: #ffffff;
+        box-shadow: 0px 8px 8px rgb(0 0 0 / 15%);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        display: block;
+        user-select: none;
+        & div {
+          height: 42px;
+          transition: all 0.4s;
+          cursor: pointer;
+          font-family: "FuturaBookC";
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 12px;
+          letter-spacing: 0.06em;
+          color: #a6a6a9;
+          padding-left: 39px;
+          position: relative;
+        }
+      }
+    }
+    &-numbers {
+      display: flex;
+      &_minus {
+        background-image: url("https://eleanboutique.ru/catalog/view/theme/default/assets/img/card-icon-1.svg");
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid #dadada;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: filter 0.4s;
+        &:hover {
+            border-color: #000;
+            filter: brightness(0);
+        }
+      }
+      &_center {
+        width: 38px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: none;
+        border-top: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+        font-family: "FuturaBookC";
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        color: #c6c6c6;
+      }
+      &_plus {
+        background-image: url('https://eleanboutique.ru/catalog/view/theme/default/assets/img/card-icon-2.svg');
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid #dadada;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: filter 0.4s;
+        &:hover {
+            border-color: #000;
+            filter: brightness(0);
+        }
+      }
+    }
+  }
+}
+
+.active {
+  transform: scale(1) translateY(0);
+}

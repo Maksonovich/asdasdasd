@@ -37,6 +37,7 @@ import MakeAnOrder from './pages/MakeAnOrder/MakeAnOrder';
 import Makesense from './pages/MakeAnOrder/Makesense';
 import Modal26 from './pages/modal/modal26';
 import Modal28 from './pages/modal/modal28';
+import Decoration from './pages/Decoration/decoration';
 
 function App() {
   return (
@@ -113,6 +114,10 @@ function App() {
           <Route
             path='Review'
             element={<Review />}
+          />
+          <Route
+          path='Decoration'
+          element={<Decoration/>}
           />
           <Route
           path='/MakeAnOrder'
