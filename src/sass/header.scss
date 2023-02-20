@@ -57,6 +57,7 @@
             column-gap: 19px;
             &_burger {
                 margin-right: 50px;
+                margin-left: 25px;
             }
         }
         &-logo {
@@ -72,7 +73,7 @@
         }
         &-num {
             display: flex;
-            column-gap: 35px;
+            column-gap: 24px;
             &-icon {
                 display: flex;
                 column-gap: 18px;
@@ -109,5 +110,11 @@
     }
     .header__nav-bottom{
         display: none;
+    }
+}
+
+.theme-toggle {
+    @media(max-width: 450px) {
+        --size:30px;
     }
 }
