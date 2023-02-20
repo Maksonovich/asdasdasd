@@ -1,46 +1,5 @@
 const coin = {
-  task: [
-    // {
-    //   id: 1,
-    //   title: "Брюки клёш",
-    //   size: 48,
-    //   price: 20000,
-    //   underPrice: 20000,
-    //   count: 1,
-    //   img:
-    //     "https://eleanboutique.ru/image/cache/catalog/novinki2022/osen22/06cad9e1-f89a-4c70-a345-87e97190428b-150x200.jpeg",
-    // },
-    // {
-    //   id: 2,
-    //   title: "Брюки клёш",
-    //   size: 59,
-    //   price: 11000,
-    //   underPrice: 11000,
-    //   count: 1,
-    //   img:
-    //     "https://eleanboutique.ru/image/cache/catalog/novinki2021/eleancyclo2702-150x200.jpg",
-    // },
-    // {
-    //   id: 3,
-    //   title: "Брюки клёш",
-    //   size: 50,
-    //   price: 17800,
-    //   underPrice: 17800,
-    //   count: 1,
-    //   img:
-    //     "https://eleanboutique.ru/image/cache/catalog/novinki2022/obtravki/elean06130-150x200.jpg",
-    // },
-    // {
-    //   id: 4,
-    //   title: "Брюки клёш",
-    //   size: 49,
-    //   price: 20900,
-    //   underPrice: 20900,
-    //   count: 1,
-    //   img:
-    //     "https://eleanboutique.ru/image/cache/catalog/novinki2022/obtravki/elean018301-150x200.jpg",
-    // },
-  ],
+  task: [],
   favorite: [],
   makeOrder: []
 };
@@ -58,12 +17,12 @@ export default (state = coin, action) => {
     case "ADD_PRICE": {
       return {
         ...state,
-        task: state.task.map((item) => {
-          if (item.id === action.id) {
-            item.price = item.price + item.underPrice;
-            item.count = item.count + 1;
+        task: state.task.map((el) => {
+          if (el.id === action.id) {
+            el.price = el.price + el.underPrice;
+            el.count = el.count + 1;
           }
-          return item;
+          return el;
         }),
       };
     }
@@ -84,11 +43,11 @@ export default (state = coin, action) => {
       };
     }
     case "SET_FAVORITES":
-      return { ...state, favorite: [...state.favorite, action.payload]};
+      return { ...state, favorite: [...state.favorite, action.payload] };
     case "MAKE__ADD":
-      return {...state, makeOrder: [...state.makeOrder, action.payload]}
+      return { ...state, makeOrder: [...state.makeOrder, action.payload] }
     case "TASK__ADD":
-      return {...state, task: [...state.task, action.payload]}
+      return { ...state, task: [...state.task, action.payload] }
     default:
       return state;
   }
@@ -112,9 +71,9 @@ export const deletePrice = (id) => {
   };
 };
 
-export const setBasket = ( task,payload) => {
+export const setBasket = (task, payload) => {
   return (dispath) => {
-    return dispath({ type: "TASK__ADD", task,payload });
+    return dispath({ type: "TASK__ADD", task, payload });
   };
 };
 

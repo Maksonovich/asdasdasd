@@ -38,113 +38,128 @@ import Makesense from './pages/MakeAnOrder/Makesense';
 import Modal26 from './pages/modal/modal26';
 import Modal28 from './pages/modal/modal28';
 import Decoration from './pages/Decoration/decoration';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <>
-      <Routes>
-        <Route
-          path=''
-          element={<Layout />}
-        >
-          <Route
-            path='/'
-            element={<Home />}
-          />
-          <Route
-            path='deliver'
-            element={<Deliver />}
-          />
-          <Route
-            path='like'
-            element={<Like />}
-          />
-          <Route
-            path='Contact'
-            element={<Contact />}
-          />
-          <Route
-            path='showRoom'
-            element={<ShowRoom />}
-          />
-          <Route
-            path='Primerka'
-            element={<Primerka />}
-          />
-          <Route
-            path='zakaz'
-            element={<Zakaz />}
-          />
-          <Route
-            path='obmen'
-            element={<Obmen />}
-          />
-          <Route
-            path='voz'
-            element={<Voz />}
-          />
-          <Route
-            path='pay'
-            element={<Pay />}
-          />
-          <Route
-            path='size'
-            element={<Modal24 />}
-          />
-          <Route
-            path='notHave'
-            element={<Modal26/>}
-          />
-          <Route
-            path='Catalog'
-            element={<Catalog />}
-          />
-          <Route
-            path='Brand'
-            element={<Brand />}
-          />
-          <Route
-            path='Favorite'
-            element={<Favorite />}
-          />
-          <Route
-            path='Decor'
-            element={<Decor />}
-          />
-          <Route
-            path='Review'
-            element={<Review />}
-          />
-          <Route
-          path='Decoration'
-          element={<Decoration/>}
-          />
-          <Route
-          path='DjKama'
-          element={<ModalKama/>}
-          />
-          <Route
-          path='/MakeAnOrder'
-          element={<Makesense/>}
-        />
-        <Route
-          path='/complete'
-          element={<ModalKama/>}
-        />
-        </Route>
-        <Route
-          path="/signup"
-          element={<SignUp />}
-        />
-        <Route
-          path="/signin"
-          element={<SignIn />}
-        />
-        <Route
-          path='/userpage'
-          element={<UserPage />}
-        />
-      </Routes>
+      {
+        loading ? (
+          <div className="loader-container">
+            <div className="spinner"></div>
+          </div>
+        ) : (
+          <Routes>
+            <Route
+              path=''
+              element={<Layout />}
+            >
+              <Route
+                path='/'
+                element={<Home />}
+              />
+              <Route
+                path='deliver'
+                element={<Deliver />}
+              />
+              <Route
+                path='like'
+                element={<Like />}
+              />
+              <Route
+                path='Contact'
+                element={<Contact />}
+              />
+              <Route
+                path='showRoom'
+                element={<ShowRoom />}
+              />
+              <Route
+                path='Primerka'
+                element={<Primerka />}
+              />
+              <Route
+                path='zakaz'
+                element={<Zakaz />}
+              />
+              <Route
+                path='obmen'
+                element={<Obmen />}
+              />
+              <Route
+                path='voz'
+                element={<Voz />}
+              />
+              <Route
+                path='pay'
+                element={<Pay />}
+              />
+              <Route
+                path='size'
+                element={<Modal24 />}
+              />
+              <Route
+                path='notHave'
+                element={<Modal26 />}
+              />
+              <Route
+                path='Catalog'
+                element={<Catalog />}
+              />
+              <Route
+                path='Brand'
+                element={<Brand />}
+              />
+              <Route
+                path='Favorite'
+                element={<Favorite />}
+              />
+              <Route
+                path='Decor'
+                element={<Decor />}
+              />
+              <Route
+                path='Review'
+                element={<Review />}
+              />
+              <Route
+                path='Decoration'
+                element={<Decoration />}
+              />
+              <Route
+                path='/MakeAnOrder'
+                element={<Makesense />}
+              />
+              <Route
+                path='/complete'
+                element={<ModalKama />}
+              />
+            </Route>
+            <Route
+              path="/signup"
+              element={<SignUp />}
+            />
+            <Route
+              path="/signin"
+              element={<SignIn />}
+            />
+            <Route
+              path='/userpage'
+              element={<UserPage />}
+            />
+          </Routes>
+        )
+      }
     </>
   );
 };
