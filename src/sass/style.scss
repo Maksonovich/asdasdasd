@@ -25,6 +25,9 @@
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     color: #000;
+    user-select: none;
+    user-zoom: none;
+    -moz-user-select: all;
 }
 
 :root[data-theme="light"] {
@@ -150,6 +153,33 @@ html {
         transform: rotate(360deg);
     }
 }
+
+.theme-toggle {
+    --size: 2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    inline-size: var(--size);
+    block-size: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: 5px;
+
+    &>svg {
+        inline-size: 100%;
+        block-size: 100%;
+        stroke-linecap: round;
+    }
+
+    @media (hover: none) {
+        --size: 48px;
+    }
+}
+
 
 @import './header.scss';
 @import './deliver.scss';

@@ -15,7 +15,11 @@ const Review = () => {
                 <div className="Otzif_row">
                     <div className="Otzif_row_video">
                         <div className='video_item'>
-                            <ReactPlayer className="video" url='https://youtu.be/Z7O1TldAeVg' />
+                            <ReactPlayer 
+                                playing={false} 
+                                loop={true}
+                                pip={true}
+                            className="video" url='https://youtu.be/Z7O1TldAeVg' />
                         </div>
                         <p>Образ со смокингом</p>
                     </div>

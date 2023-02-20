@@ -5,4 +5,6 @@ export const themes = {
     light: 'light',
 }
 
-export const ThemeContext = React.createContext({})
+export const ThemeContext = React.createContext({
+
+})

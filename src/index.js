@@ -14,11 +14,11 @@ root.render(
     <ThemeProvider>
         <AuthContextProvider>
             <BrowserRouter>
-                <Context.Consumer>
+                <Context>
                     <Provider store={store}>
                         <App />
                     </Provider>
-                </Context.Consumer>
+                </Context>
             </BrowserRouter>
         </AuthContextProvider>
     </ThemeProvider>
