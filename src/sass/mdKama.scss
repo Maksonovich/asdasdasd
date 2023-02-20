@@ -1,6 +1,7 @@
 .mdKama {
   display: block;
-  position: absolute;
+  z-index: 999999999999;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

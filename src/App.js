@@ -120,6 +120,10 @@ function App() {
           element={<Decoration/>}
           />
           <Route
+          path='DjKama'
+          element={<ModalKama/>}
+          />
+          <Route
           path='/MakeAnOrder'
           element={<Makesense/>}
         />

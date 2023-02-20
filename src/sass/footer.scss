@@ -15,6 +15,18 @@
   width: 240px;
 }
 
+.FooterApps {
+  @media(max-width:425px) {
+    display: none;
+  }
+}
+
+.Footer_Subscribing {
+  @media(max-width:425px) {
+    margin-top: 45px;
+  }
+}
+
 .Footer_icon {
   margin-top: -10px;
 }

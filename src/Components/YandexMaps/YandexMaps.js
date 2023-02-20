@@ -13,7 +13,7 @@ const YandexMaps = () => {
 
     return (
         <YMaps>
-            <div>
+            <div className='YMaps__map'>
                 <Map
                     defaultState={{
                         center: [
