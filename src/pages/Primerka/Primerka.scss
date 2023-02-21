@@ -2,11 +2,21 @@
   position: absolute;
   transform: translateX(700px);
   z-index: 1;
+  @media(max-width:450px) {
+    position: static;
+    transform: translate(0);
+    flex-direction: column;
+  }
 }
 
 .kama {
   position: relative;
   overflow: hidden;
+  @media(max-width:450px) {
+    position: static;
+    overflow: hidden;
+    background-color: #f9f9f9;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -19,6 +29,9 @@
     background-size: cover;
     z-index: -1;
     left: -203px;
+    @media(max-width:450px) {
+      content: none;
+    }
   }
   &::before {
     content: "";
@@ -29,6 +42,9 @@
     height: 100%;
     background-color: #edf2f2;
     z-index: -2;
+    @media(max-width:450px) {
+      content: none;
+    }
   }
 }
 
@@ -39,10 +55,18 @@
 .imgKama {
   opacity: 0;
   z-index: -3;
+  @media(max-width: 450px) {
+    transform: translate(0);
+    display: none;
+  }
 }
 .fitting {
   transform: translateX(-110px);
   margin-top: 52px;
+  @media(max-width: 450px) {
+    transform: translate(0);
+    text-align: center;
+  }
 }
 
 .moscow {
@@ -157,11 +181,18 @@
 .reviews_row {
   display: flex;
   gap: 8px;
+  @media(max-width: 450px) {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
 }
 
 .h2 {
   text-align: left;
   font-size: 21px;
+  @media(max-width:450px) {
+    margin-bottom: 15px;
+  }
 }
 
 .reviews_block {
@@ -171,6 +202,13 @@
   width: 650px;
   height: 392px;
   background: #f9f9f9;
+  @media(max-width:450px) {
+    position: static;
+    padding: 0;
+    width: auto;
+    transform: translate(0);
+    margin-top: 45px;
+  }
 }
 
 .border {
@@ -184,10 +222,19 @@
   background: #f9f9f9;
   width: 650px;
   height: 392px;
+  @media(max-width: 450px) {
+    position: static;
+    transform: translate(0);
+    width: auto;
+    height: auto;
+  }
 }
 
 .formIcon {
   transform: translateX(290px) translateY(20px);
+  @media(max-width:450px) {
+    display: none;
+  }
 }
 
 .form_inner h1 {
@@ -202,12 +249,19 @@
   padding: 0 0 0 10px;
   border: 1px solid black;
   color: black;
+  @media(max-width: 450px) {
+    width: 100%;
+    margin-top: -1px;
+  }
 }
 
 .form_input_row1 {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  @media(max-width:450px) {
+    flex-direction: column;
+  }
 }
 
 .form_input_row2 {
@@ -221,6 +275,9 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  @media(max-width:450px) {
+    flex-direction: column;
+  }
   & textarea {
     display: block;
     outline: none;
@@ -239,6 +296,9 @@
     width: 421px;
     height: 100px;
     overflow: auto;
+    @media(max-width: 450px) {
+      width: 100%;
+    }
   }
   & button {
     cursor: pointer;
@@ -260,6 +320,10 @@
     letter-spacing: 0.1em;
     color: #000000;
     border-left: none;
+    @media(max-width:450px) {
+      margin-top: -1px;
+      border-left:1px solid #000000;
+    }
     &:hover {
         background-color: #000000;
         color: #fff;
