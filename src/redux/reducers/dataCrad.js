@@ -42,17 +42,19 @@ export default (state = coin, action) => {
         }),
       };
     }
-    case "CHANGE": {
+    case 'CHANGE_BASKET':
       return {
-          ...state,
-          task: state.task.map((item) => {
-              if (item.id === action.id) {
-                item.size = action.size
-              }
-              return item
-          })
-      }
-  }
+        ...state,
+        task: state.task.map(item => {
+          if (item.id === action.payload.id) {
+            return {
+              ...item,
+              size: action.payload.size
+            }
+          }
+          return item;
+        })
+      };
     case "SET_FAVORITES":
       return { ...state, favorite: [...state.favorite, action.payload] };
     case "MAKE__ADD":
@@ -82,9 +84,9 @@ export const deletePrice = (id) => {
   };
 };
 
-export const ChangeBasket = ( id) => {
+export const changeBasket = ( id,size) => {
   return (dispath) => {
-      return dispath({type: "CHANGE", id})
+      return dispath({type: "CHANGE_BASKET", payload:{id,size}})
   }
 }
 

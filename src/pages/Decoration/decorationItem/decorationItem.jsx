@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import X from "../../../assets/modal/close-svgrepo.svg";
-import { addPrice, ChangeBasket, deletePrice, deleteTask } from "../../../redux/reducers/dataCrad";
+import { addPrice, changeBasket, deletePrice, deleteTask } from "../../../redux/reducers/dataCrad";
 
 const DecorationItem = ({ item }) => {
   const [list, setList] = useState(false);
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
+
+  const handleSizeChange = (size) => {
+    dispatch(changeBasket(item.id, size));
+    setList(!list)
+  };
 
   return (
     <div className="makingItem">
@@ -30,17 +35,17 @@ const DecorationItem = ({ item }) => {
           <div
             className={`makingItem__flex-select_list ${list ? "active" : ""}`}
           >
-            <div onClick={() => dispath(ChangeBasket(item.id))}>
+            <div onClick={() => handleSizeChange("48")}>
               <input type="hidden" />
               Размер 48
             </div>
-            <div>
+            <div onClick={() => handleSizeChange("50")}>
               <input type="hidden" />
               размер 50
             </div>
-            <div>
+            <div onClick={() => handleSizeChange("40")}>
               <input type="hidden" />
-              размер 50
+              размер 40
             </div>
           </div>
         </div>
@@ -49,7 +54,7 @@ const DecorationItem = ({ item }) => {
             type="button"
             className="makingItem__flex-numbers_minus"
             onClick={() => {
-                dispath(deletePrice(item.id))
+                dispatch(deletePrice(item.id))
             }}
           ></button>
           <input
@@ -61,12 +66,12 @@ const DecorationItem = ({ item }) => {
             type="button"
             className="makingItem__flex-numbers_plus"
             onClick={() => {
-                dispath(addPrice(item.id));
+                dispatch(addPrice(item.id));
             }}
           ></button>
         </div>
         <div className="makingItem__flex-price">{item.price}</div>
-        <a className="makingItem__flex-img" onClick={() => {dispath(deleteTask(item.id))}}>
+        <a className="makingItem__flex-img" onClick={() => {dispatch(deleteTask(item.id))}}>
           <img src={X} alt="x" />
         </a>
       </div>
