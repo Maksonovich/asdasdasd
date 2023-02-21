@@ -32,31 +32,31 @@ const Header = () => {
                   >
                     <span className='CATEGORY'>КАТЕГОРИИ</span>
                     <li>
-                      <a href=''>НОВИНКИ</a>
+                      <a>НОВИНКИ</a>
                     </li>
                     <li>
-                      <a href=''>ЮБКИ</a>
+                      <a>ЮБКИ</a>
                     </li>
                     <li>
-                      <a href=''>СМОКИНГ</a>
+                      <a>СМОКИНГ</a>
                     </li>
                     <li>
-                      <a href=''>КОСТЮМЫ</a>
+                      <a>КОСТЮМЫ</a>
                     </li>
                     <li>
-                      <a href=''>АКССЕСУАРЫ</a>
+                      <a>АКССЕСУАРЫ</a>
                     </li>
                     <li>
-                      <a href="">БРЮКИ</a>
+                      <a>БРЮКИ</a>
                     </li>
                     <li>
-                      <a href="">БЛУЗКИ</a>
+                      <a>БЛУЗКИ</a>
                     </li>
                     <li>
-                      <a href="">ПЛАТЬЯ</a>
+                      <a>ПЛАТЬЯ</a>
                     </li>
                     <li>
-                      <a href="">ТОПЫ И ЖИЛЕТЫ</a>
+                      <a>ТОПЫ И ЖИЛЕТЫ</a>
                     </li>
                   </ul>
                   <div onClick={() => setNav(!nav)} className='mobile_btn'>
@@ -129,14 +129,14 @@ const Header = () => {
           </li>
         </nav>
         <nav className='header__nav-bottom'>
-          <li><Link to="Catalog" className='header__nav-bottom_link' href="#">SALE</Link></li>
-          <li><Link to="Catalog" className='header__nav-bottom_link' href="#">НОВИНИКИ</Link></li>
+          <li><Link to="Catalog" className='header__nav-bottom_link'>SALE</Link></li>
+          <li><Link to="Catalog" className='header__nav-bottom_link'>НОВИНИКИ</Link></li>
           <li><Link className='header__nav-bottom_link' to="/Catalog">КАТЕГОРИИ</Link> </li>
-          <li><a className='header__nav-bottom_link' href="#">НАШИ КОЛЛЕКЦИИ</a> </li>
-          <li><Link to="Review" className='header__nav-bottom_link' href="#">ОТЗЫВЫ</Link> </li>
-          <li><Link to="Brand" className='header__nav-bottom_link' href="#">О БРЕНДЕ</Link></li>
-          <li><Link to='showRoom' className='header__nav-bottom_link' href="#">ШОУРУМ</Link></li>
-          <li><Link to='Contact' className='header__nav-bottom_link' href="#">КОНТАКТЫ</Link></li>
+          <li><a className='header__nav-bottom_link'>НАШИ КОЛЛЕКЦИИ</a> </li>
+          <li><Link to="Review" className='header__nav-bottom_link'>ОТЗЫВЫ</Link> </li>
+          <li><Link to="Brand" className='header__nav-bottom_link'>О БРЕНДЕ</Link></li>
+          <li><Link to='showRoom' className='header__nav-bottom_link'>ШОУРУМ</Link></li>
+          <li><Link to='Contact' className='header__nav-bottom_link'>КОНТАКТЫ</Link></li>
         </nav>
       </div>
       <Basket />

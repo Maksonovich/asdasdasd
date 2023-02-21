@@ -1,7 +1,7 @@
 const coin = {
   task: [],
   favorite: [],
-  makeOrder: []
+  makeOrder: [],
 };
 
 export default (state = coin, action) => {
@@ -42,25 +42,25 @@ export default (state = coin, action) => {
         }),
       };
     }
-    case 'CHANGE_BASKET':
+    case "CHANGE_BASKET":
       return {
         ...state,
-        task: state.task.map(item => {
+        task: state.task.map((item) => {
           if (item.id === action.payload.id) {
             return {
               ...item,
-              size: action.payload.size
-            }
+              size: action.payload.size,
+            };
           }
           return item;
-        })
+        }),
       };
     case "SET_FAVORITES":
       return { ...state, favorite: [...state.favorite, action.payload] };
     case "MAKE__ADD":
-      return { ...state, makeOrder: [...state.makeOrder, action.payload] }
+      return { ...state, makeOrder: [...state.makeOrder, action.payload] };
     case "TASK__ADD":
-      return { ...state, task: [...state.task, action.payload] }
+      return { ...state, task: [...state.task, action.payload] };
     default:
       return state;
   }
@@ -84,11 +84,11 @@ export const deletePrice = (id) => {
   };
 };
 
-export const changeBasket = ( id,size) => {
+export const changeBasket = (id, size) => {
   return (dispath) => {
-      return dispath({type: "CHANGE_BASKET", payload:{id,size}})
-  }
-}
+    return dispath({ type: "CHANGE_BASKET", payload: { id, size } });
+  };
+};
 
 export const setBasket = (task, payload) => {
   return (dispath) => {

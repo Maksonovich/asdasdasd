@@ -47,6 +47,18 @@ const DecorationItem = ({ item }) => {
               <input type="hidden" />
               размер 40
             </div>
+            <div onClick={() => handleSizeChange("60")}>
+              <input type="hidden" />
+              размер 60
+            </div>
+            <div onClick={() => handleSizeChange("63")}>
+              <input type="hidden" />
+              размер 62
+            </div>
+            <div onClick={() => handleSizeChange("39")}>
+              <input type="hidden" />
+              размер 39
+            </div>
           </div>
         </div>
         <div className="makingItem__flex-numbers">

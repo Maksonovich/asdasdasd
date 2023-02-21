@@ -51,19 +51,19 @@ const HeaderStatic = () => {
                     }
                   >
                     <li>
-                      <a href=''>Product</a>
+                      <a>Product</a>
                     </li>
                     <li>
-                      <a href=''>About Us</a>
+                      <a>About Us</a>
                     </li>
                     <li>
-                      <a href=''>Customers</a>
+                      <a>Customers</a>
                     </li>
                     <li>
-                      <a href=''>Price</a>
+                      <a>Price</a>
                     </li>
                     <li>
-                      <a href=''>Contacts</a>
+                      <a>Contacts</a>
                     </li>
                   </ul>
                   <div onClick={() => setNav(!nav)} className='mobile_btn'>

@@ -17,7 +17,7 @@ import Modal28 from "../modal/modal28";
 import Modal27 from "../modal/modal27";
 import Modal25 from "../modal/modal25";
 import { useDispatch } from "react-redux";
-import { setBasket, setFavorites } from "../../redux/reducers/dataCrad";
+import { changeBasket, setBasket, setFavorites } from "../../redux/reducers/dataCrad";
 
 const MakeAnOrder = ({products}) => {
   const dispatch = useDispatch()
@@ -27,6 +27,10 @@ const MakeAnOrder = ({products}) => {
   const { aidar2, setAidar2} = useContext(CustomContext)
   const { aidar3, setAidar3} = useContext(CustomContext)
   const { aidar4, setAidar4} = useContext(CustomContext)
+
+  const handleSizeChange = (size) => {
+    dispatch(changeBasket(products.id, size))
+  };
 
   return (
     <>
@@ -98,23 +102,23 @@ const MakeAnOrder = ({products}) => {
                   <input type="radio" name="size-select" disabled />
                   <span>40</span>
                 </label>
-                <label>
-                  <input type="radio" name="size-select" />
+                <label onClick={() => handleSizeChange("42")}>
+                  <input type="radio" name="size-select"/>
                   <span>42</span>
                 </label>
-                <label>
+                <label onClick={() => handleSizeChange("44")}>
                   <input type="radio" name="size-select" />
                   <span>44</span>
                 </label>
-                <label>
+                <label onClick={() => handleSizeChange("46")}>
                   <input type="radio" name="size-select" />
                   <span>46</span>
                 </label>
-                <label>
+                <label onClick={() => handleSizeChange("50")}>
                   <input type="radio" name="size-select" />
                   <span>50</span>
                 </label>
-                <label>
+                <label onClick={() => handleSizeChange("52")}>
                   <input type="radio" name="size-select" />
                   <span>52</span>
                 </label>

@@ -765,7 +765,8 @@
             "category": "trousers",
             "text": "Подчеркнет линию талии",
             "count": 1,
-            "underPrice": 30900
+            "underPrice": 30900,
+            "size": 48
         },
         {
             "id": 61,

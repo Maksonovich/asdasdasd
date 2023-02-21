@@ -218,7 +218,7 @@ const Decoration = () => {
                 <b></b>
                 <span>Я принимаю <a>договор публичной оферты</a></span>
               </label>
-              <button className="Making__blocks-left_btn" type="button">Оформить заказ</button>
+              <button className="Making__blocks-left_btn" type="submit">Оформить заказ</button>
             </div>
             <div className="Making__blocks-right">
               <img
