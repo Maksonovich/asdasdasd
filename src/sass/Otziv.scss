@@ -53,6 +53,10 @@
             }
         }
     }
+    &_inner-dop{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 @media (max-width:425px){
     .Otziv{
