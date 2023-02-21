@@ -42,6 +42,17 @@ export default (state = coin, action) => {
         }),
       };
     }
+    case "CHANGE": {
+      return {
+          ...state,
+          task: state.task.map((item) => {
+              if (item.id === action.id) {
+                item.size = action.size
+              }
+              return item
+          })
+      }
+  }
     case "SET_FAVORITES":
       return { ...state, favorite: [...state.favorite, action.payload] };
     case "MAKE__ADD":
@@ -70,6 +81,12 @@ export const deletePrice = (id) => {
     return dispath({ type: "MINUS_PRICE", id });
   };
 };
+
+export const ChangeBasket = ( id) => {
+  return (dispath) => {
+      return dispath({type: "CHANGE", id})
+  }
+}
 
 export const setBasket = (task, payload) => {
   return (dispath) => {

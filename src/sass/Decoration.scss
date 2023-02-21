@@ -153,6 +153,9 @@
           color: #a6a6a9;
           padding-left: 39px;
           position: relative;
+          &:hover {
+            background-color: #F8EFE7;
+          }
         }
       }
     }

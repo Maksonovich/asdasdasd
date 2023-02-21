@@ -14,7 +14,7 @@ const Modal27 = ({Product}) => {
         <div className='container'>
             <div className='md27__over'>
                 <div className='md27__inner'>
-                    <div className='md27__close' title='Закрыть' onClick={() => setAidar3(!aidar3)}>Закрыть</div>
+                    <Link className='md27__close' title='Закрыть' onClick={() => setAidar3(!aidar3)}  to='/Catalog'>Закрыть</Link>
                     <div className='md27__main'>
                         <h2 className='md27__main-title'>
                         {Product}
@@ -72,12 +72,11 @@ const Modal27 = ({Product}) => {
                             </div>
                         </div>
                         <div className='md27__btn'>
-                            <Link onClick={() => setAidar3(!aidar3)} className='md27__btn-first btn'>ПРОДОЛЖИТЬ ПОКУПКИ</Link>
+                            <Link onClick={() => setAidar3(!aidar3)} to='/Catalog' className='md27__btn-first btn'>ПРОДОЛЖИТЬ ПОКУПКИ</Link>
                             <Link to="/Decoration" onClick={() => setAidar3(!aidar3)} className='md27__btn-second btn'>ПЕРЕЙТИ К ОФОРМЛЕНИЮ</Link>
                         </div>
                     </div>
                 </div>
-               
             </div>
         </div>
     </section>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import X from "../../../assets/modal/close-svgrepo.svg";
-import { addPrice, deletePrice, deleteTask } from "../../../redux/reducers/dataCrad";
+import { addPrice, ChangeBasket, deletePrice, deleteTask } from "../../../redux/reducers/dataCrad";
 
 const DecorationItem = ({ item }) => {
   const [list, setList] = useState(false);
@@ -30,7 +30,7 @@ const DecorationItem = ({ item }) => {
           <div
             className={`makingItem__flex-select_list ${list ? "active" : ""}`}
           >
-            <div>
+            <div onClick={() => dispath(ChangeBasket(item.id))}>
               <input type="hidden" />
               Размер 48
             </div>
