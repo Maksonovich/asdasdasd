@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import Basket from "./../../pages/basket/basket";
 import { CustomContext } from "../../utils/context";
 import { BsPeople } from "react-icons/bs";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import ThemeBtn from "../../Components/ThemeBtn";
 
 const HeaderStatic = () => {
   const [stickyclass, setStickyclass] = useState("");
@@ -24,6 +26,8 @@ const HeaderStatic = () => {
     }
   };
 
+  const [nav, setNav] = useState(false);
+
   const { basket, setBasket } = useContext(CustomContext);
   const totalCount = useSelector((store) =>
     store.task.task.reduce((asc, item) => asc + item.count, 0)
@@ -36,11 +40,35 @@ const HeaderStatic = () => {
         <nav className="headerS__nav">
           <li>
             <ul className="headerS__icons">
-              <li className="headerS__icons-burger">
-                <div className="header__burger">
-                  <span className="header__burger-line"></span>
-                  <span className="header__burger-line"></span>
-                  <span className="header__burger-line"></span>
+              <ThemeBtn />
+              <li className='header__nav-icon_burger'>
+                <div className='header__burger'>
+                  <div className='boxx'>
+                  </div>
+                  <ul
+                    className={
+                      nav ? ['menu', 'active'].join(' ') : ['menu']
+                    }
+                  >
+                    <li>
+                      <a href=''>Product</a>
+                    </li>
+                    <li>
+                      <a href=''>About Us</a>
+                    </li>
+                    <li>
+                      <a href=''>Customers</a>
+                    </li>
+                    <li>
+                      <a href=''>Price</a>
+                    </li>
+                    <li>
+                      <a href=''>Contacts</a>
+                    </li>
+                  </ul>
+                  <div onClick={() => setNav(!nav)} className='mobile_btn'>
+                    {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+                  </div>
                 </div>
               </li>
               <li>
