@@ -3,11 +3,6 @@ import { TbHanger } from 'react-icons/tb'
 
 const ContactQuestion = () => {
 
-    const inpStyles = {
-        width: "300px",
-        height: "60px",
-        padding: "20px"
-    }
 
     const iconStyle = {
         fill: "#C0A78F",
@@ -24,14 +19,14 @@ const ContactQuestion = () => {
                     <TbHanger style={iconStyle} />
                 </div>
                 <form className='formInpInfo' action="FIO">
-                    <input style={inpStyles} type="text" placeholder='Введите имя' />
-                    <input style={inpStyles} type="number" placeholder='Введите Телефон' />
+                    <input type="text" placeholder='Введите имя' />
+                    <input type="number" placeholder='Введите Телефон' />
                 </form>
                 <form action="data">
-                    <input style={{ width: "600px", height: "60px", padding: "20px" }} type="date" placeholder='Выберите удобное для вас время ' />
+                    <input className='formInpInfo-aidar' style={{ height: "60px", padding: "20px" }} type="date" placeholder='Выберите удобное для вас время ' />
                 </form>
-                <form action="/djkama" style={{ marginTop : "30px",display: "flex" }}>
-                    <textarea type="text" style={{ height: "100px", resize:"none",textTransform:"uppercase" , padding: "17.5px", display: "block", flexGrow: "1"}} placeholder='Добавьте комментарий' />
+                <form className='formInpInfo-aidar2' action="/djkama" style={{ marginTop : "30px",display: "flex" }}>
+                    <textarea  type="text" style={{ height: "100px", resize:"none",textTransform:"uppercase" , padding: "17.5px", display: "block", flexGrow: "1"}} placeholder='Добавьте комментарий' />
                     <button style={{
                         width: "182px",
                         height: "60px"

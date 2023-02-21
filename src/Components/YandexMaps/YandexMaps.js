@@ -23,7 +23,7 @@ const YandexMaps = () => {
 
                     }}
 
-                    style={{ width: "669px", height: "694px" }}
+                    style={{ minWidth: '100px',width:"694px", height: "694px" }}
 
                 >
                     <Placemark geometry={[
