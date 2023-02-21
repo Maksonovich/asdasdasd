@@ -3,6 +3,11 @@
   display: flex;
   align-items: center;
   width: 100%;
+  @media (max-width: 1200px) {
+    padding: 30px 0;
+    border-bottom: 1px solid #e3e4e4;
+    align-items: stretch;
+  }
   &-link {
     width: 80px;
     min-width: 80px;
@@ -20,6 +25,13 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    @media (max-width: 1200px) {
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 576px) {
+      justify-content: space-between;
+    }
     &-title {
       outline: none;
       display: inline-block;
@@ -28,6 +40,9 @@
       line-height: 20px;
       color: #242424;
       margin-right: auto;
+      @media (max-width: 1200px) {
+        align-items: flex-start;
+      }
     }
     &-img {
       width: 16px;
@@ -41,6 +56,15 @@
         width: 100%;
         filter: brightness(0) opacity(0.3);
       }
+      @media(max-width:1200px) {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #676767;
+        filter: brightness(0.3);
+        & img {
+          filter: brightness(0.3);
+        }
+      }
     }
     &-price {
       font-family: "FuturaBookC";
@@ -48,11 +72,23 @@
       font-weight: 500;
       font-size: 18px;
       line-height: 23px;
+      @media (max-width: 1200px) {
+        order: 1;
+        width: 100%;
+        margin: auto 0;
+      }
     }
     &-select {
       position: relative;
       margin-right: 38px;
       user-select: none;
+      @media (max-width: 576px) {
+        margin-right: 0;
+      }
+      @media (max-width: 1200px) {
+        order: 2;
+        margin-top: auto;
+      }
       &_top {
         display: flex;
         align-items: center;
@@ -64,6 +100,12 @@
         cursor: pointer;
         position: relative;
         z-index: 1;
+        @media (max-width: 576px) {
+          width: 120px;
+        }
+        @media (max-width: 400px) {
+          width: 110px;
+        }
         &-size {
           font-family: "FuturaBookC";
           font-weight: normal;
@@ -73,6 +115,9 @@
           display: flex;
           align-items: center;
           transition: all 0.4s;
+          @media(max-width:400px) {
+            font-size: 12px;
+          }
         }
         &-img {
           width: 17px;
@@ -113,6 +158,14 @@
     }
     &-numbers {
       display: flex;
+      @media (max-width: 1200px) {
+        order: 3;
+        margin-top: auto;
+        margin-left: auto;
+      }
+      @media (max-width: 576px) {
+        margin-right: 0;
+      }
       &_minus {
         background-image: url("https://eleanboutique.ru/catalog/view/theme/default/assets/img/card-icon-1.svg");
         width: 40px;
@@ -128,8 +181,8 @@
         background-position: center;
         transition: filter 0.4s;
         &:hover {
-            border-color: #000;
-            filter: brightness(0);
+          border-color: #000;
+          filter: brightness(0);
         }
       }
       &_center {
@@ -149,7 +202,7 @@
         color: #c6c6c6;
       }
       &_plus {
-        background-image: url('https://eleanboutique.ru/catalog/view/theme/default/assets/img/card-icon-2.svg');
+        background-image: url("https://eleanboutique.ru/catalog/view/theme/default/assets/img/card-icon-2.svg");
         width: 40px;
         height: 40px;
         display: flex;
@@ -163,8 +216,8 @@
         background-position: center;
         transition: filter 0.4s;
         &:hover {
-            border-color: #000;
-            filter: brightness(0);
+          border-color: #000;
+          filter: brightness(0);
         }
       }
     }

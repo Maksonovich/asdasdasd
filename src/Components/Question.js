@@ -8,7 +8,7 @@ const Question = () => {
                 <div className='deliver__questions-block'>
                     <img className='deliver__questions-icon' src={icon} alt="icon" />
                     <h2 className='deliver__questions-title'>ЗАДАТЬ ВОПРОС</h2>
-                    <form className='deliver__questions-form'>
+                    <form className='deliver__questions-form' action='/djkama'>
                         <div className='deliver__questions-object'><input className='deliver__questions-object_inp' type="text" placeholder='Введите имя' required /></div>
                         <div className='deliver__questions-object'><input className='deliver__questions-object_inp' type="number" placeholder='Введите номер' required /></div>
                         <div className='deliver__questions-object'><input className='deliver__questions-object_inp' type="email" placeholder='Введите свой email' required /></div>

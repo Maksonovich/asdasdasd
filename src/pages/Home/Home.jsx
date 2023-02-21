@@ -13,7 +13,7 @@ import FabFloat from '../../Components/FabFloat';
 const Home = () => {
 
     return (
-        <main>
+        <main className='page'>
             <FabFloat />
             <FloatingWhatsApp />
             <Begin />

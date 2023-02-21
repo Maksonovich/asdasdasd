@@ -9,7 +9,7 @@ const Primerka = () => {
   const [phone, setPhone] = useState("");
   const [time, setTime] = useState("");
   const [comment, setComment] = useState("");
-  function f2() {
+  function f2(e) {
     setName("");
     setPhone("");
     setTime("");
@@ -18,7 +18,7 @@ const Primerka = () => {
 
   return (
     <>
-    <FloatingWhatsApp />
+      <FloatingWhatsApp />
       <div className="kama">
         <div className="container">
           <div className="primer">
@@ -221,10 +221,11 @@ const Primerka = () => {
                     type="text"
                     placeholder="ДОБАВИТЬ КОММЕНТАРИЙ"
                   />
-                  <button onClick={f2} className="form_button">
+                  <form action="/djkama"><button onClick={f2} className="form_button" type="submit">
                     {" "}
                     ЗАПИСАТЬСЯ{" "}
-                  </button>
+                  </button></form>
+                  
                 </div>
               </div>
             </div>

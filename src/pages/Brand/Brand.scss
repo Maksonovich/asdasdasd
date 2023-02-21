@@ -14,9 +14,15 @@
     }
 
     &-img {
-      width: 1338px;
+      width: 100%;
       height: 600px;
-      background: url("../../assets/About/image.jpg"), no-repeat;
+      background: url("../../assets/About/image.jpg"), no-repeat center;
+      @media (max-width: 1408px) {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60vw;
+      }
     }
 
     &-text {
@@ -30,7 +36,10 @@
       color: #171717;
       columns: 570px 2;
       column-gap: 50px;
-
+      @media (max-width: 1328px) {
+        padding: 0;
+        margin-bottom: 75px;
+      }
       &-title {
         font-family: "FuturaBookC";
         font-style: normal;
@@ -43,6 +52,9 @@
       &-p {
         text-align: left;
         width: 570px;
+        @media (max-width: 1328px) {
+          width: 100%;
+        }
       }
     }
 
@@ -50,12 +62,19 @@
       padding: 0 50px;
       display: flex;
       column-gap: 50px;
+      @media (max-width: 1363px) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       &-cards {
-        width: 590px;
         display: flex;
         flex-wrap: wrap;
         row-gap: 25px;
+
+        & img {
+          width: 100%;
+        }
 
         &-title {
           font-family: "FuturaBookC";
@@ -69,15 +88,18 @@
           font-style: normal;
           font-weight: 400;
           font-size: 15px;
+          @media (max-width: 1363px) {
+            margin-bottom: 37px;
+          }
         }
       }
     }
   }
 
-  @media all and (max-width: 1200px) {
+  @media all and (max-width: 1328px) {
     .brand-text-title {
-      margin-top: 47px;
       text-align: center;
+      margin-bottom: 15px;
     }
   }
 
@@ -101,6 +123,9 @@
       display: flex;
       flex-wrap: wrap;
       column-gap: 60px;
+      @media(max-width:1355px) {
+        justify-content: center;
+      }
     }
 
     &-card {
@@ -138,6 +163,11 @@
     background: #fff;
     width: 1338px;
     padding: 37px 200px 45px;
+    @media(max-width: 1340px) {
+      padding:0;
+      width: 100%;
+      padding: 40px 0 44px;
+    }
   }
 
   &-icon {
@@ -158,7 +188,11 @@
   &-form {
     display: flex;
     flex-wrap: wrap;
-
+    @media(max-width:1338px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &-sections input {
       padding: 20px;
       border: 0.5px solid #000;
@@ -176,6 +210,7 @@
     &-com {
       margin-top: 20px;
       padding: 20px;
+      width: 312px;
       display: block;
       flex-grow: 1;
       height: 100px;
@@ -206,5 +241,8 @@
     font-size: 14px;
     margin: 16px 0;
     text-align: left;
+    @media(max-width: 1338px ) {
+      display: none;
+    }
   }
 }

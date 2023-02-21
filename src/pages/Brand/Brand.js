@@ -86,7 +86,7 @@ const Brand = () => {
                         <div className='registr-block'>
                             <img className='registr-icon' src={Icon} alt='' />
                             <h4 className='registr-title'>ЗАПИСАТЬСЯ НА ПРИМЕРКУ В ШОУРУМЕ</h4>
-                            <form className='registr-form'>
+                            <form className='registr-form' action='/djkama'>
                                 <div className='registr-form-sections'>
                                     <input required type='text' placeholder='ВВЕДИТЕ ИМЯ' />
                                 </div>

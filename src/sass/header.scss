@@ -68,6 +68,7 @@
 
             &_burger {
                 margin-right: 50px;
+                margin-left: 25px;
             }
         }
 
@@ -86,8 +87,7 @@
 
         &-num {
             display: flex;
-            column-gap: 35px;
-
+            column-gap: 24px;
             &-icon {
                 display: flex;
                 column-gap: 18px;
@@ -201,4 +201,8 @@
 
 .menu a {
     font-size: 28px;
+.theme-toggle {
+    @media(max-width: 450px) {
+        --size:30px;
+    }
 }
