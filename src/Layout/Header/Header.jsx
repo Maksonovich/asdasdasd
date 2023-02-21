@@ -10,6 +10,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const { changeCategory } = useContext(CustomContext)
 
   const { basket, setBasket } = useContext(CustomContext);
   const totalCount = useSelector((store) =>
@@ -29,31 +30,31 @@ const Header = () => {
                   <ul className={nav ? ["menu", "active"].join(" ") : ["menu"]}>
                     <span className="CATEGORY">КАТЕГОРИИ</span>
                     <li>
-                      <a>НОВИНКИ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("novelties")|| setNav(!nav) }>НОВИНКИ</Link>
                     </li>
                     <li>
-                      <a>ЮБКИ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("skirt")|| setNav(!nav) }>ЮБКИ</Link>
                     </li>
                     <li>
-                      <a>СМОКИНГ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("tuxedo")|| setNav(!nav) }>СМОКИНГ</Link>
                     </li>
                     <li>
-                      <a>КОСТЮМЫ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("suits")|| setNav(!nav) }>КОСТЮМЫ</Link>
                     </li>
                     <li>
-                      <a>АКССЕСУАРЫ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("accessories")|| setNav(!nav) }>АКССЕСУАРЫ</Link>
                     </li>
                     <li>
-                      <a>БРЮКИ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("trousers")|| setNav(!nav) }>БРЮКИ</Link>
                     </li>
                     <li>
-                      <a>БЛУЗКИ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("blouses")|| setNav(!nav) }>БЛУЗКИ</Link>
                     </li>
                     <li>
-                      <a>ПЛАТЬЯ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("dresses")|| setNav(!nav) }>ПЛАТЬЯ</Link>
                     </li>
                     <li>
-                      <a>ТОПЫ И ЖИЛЕТЫ</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("tops and vests")|| setNav(!nav) }>ТОПЫ И ЖИЛЕТЫ</Link>
                     </li>
                   </ul>
                   <div onClick={() => setNav(!nav)} className="mobile_btn">
@@ -233,22 +234,17 @@ const Header = () => {
         </nav>
         <nav className="header__nav-bottom">
           <li>
-            <Link to="Catalog" className="header__nav-bottom_link">
-              SALE
-            </Link>
-          </li>
-          <li>
-            <Link to="Catalog" className="header__nav-bottom_link">
+            <Link to="Catalog" onClick={() =>  changeCategory("novelties")} className="header__nav-bottom_link">
               НОВИНИКИ
             </Link>
           </li>
           <li>
-            <Link className="header__nav-bottom_link" to="/Catalog">
+            <Link className="header__nav-bottom_link" to="/Catalog" onClick={() => changeCategory("tops and vests")}>
               КАТЕГОРИИ
             </Link>{" "}
           </li>
           <li>
-            <a className="header__nav-bottom_link">НАШИ КОЛЛЕКЦИИ</a>{" "}
+            <Link to='/Catalog' onClick={() => changeCategory("Autumn-winter 20-21")} className="header__nav-bottom_link">НАШИ КОЛЛЕКЦИИ</Link>{" "}
           </li>
           <li>
             <Link to="Review" className="header__nav-bottom_link">

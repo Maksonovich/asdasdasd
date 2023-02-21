@@ -50,20 +50,33 @@ const HeaderStatic = () => {
                       nav ? ['menu', 'active'].join(' ') : ['menu']
                     }
                   >
+                    <span className="CATEGORY">КАТЕГОРИИ</span>
                     <li>
-                      <a>Product</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("novelties")|| setNav(!nav) }>НОВИНКИ</Link>
                     </li>
                     <li>
-                      <a>About Us</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("skirt")|| setNav(!nav) }>ЮБКИ</Link>
                     </li>
                     <li>
-                      <a>Customers</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("tuxedo")|| setNav(!nav) }>СМОКИНГ</Link>
                     </li>
                     <li>
-                      <a>Price</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("suits")|| setNav(!nav) }>КОСТЮМЫ</Link>
                     </li>
                     <li>
-                      <a>Contacts</a>
+                      <Link to="/Catalog" onClick={()=> changeCategory("accessories")|| setNav(!nav) }>АКССЕСУАРЫ</Link>
+                    </li>
+                    <li>
+                      <Link to="/Catalog" onClick={()=> changeCategory("trousers")|| setNav(!nav) }>БРЮКИ</Link>
+                    </li>
+                    <li>
+                      <Link to="/Catalog" onClick={()=> changeCategory("blouses")|| setNav(!nav) }>БЛУЗКИ</Link>
+                    </li>
+                    <li>
+                      <Link to="/Catalog" onClick={()=> changeCategory("dresses")|| setNav(!nav) }>ПЛАТЬЯ</Link>
+                    </li>
+                    <li>
+                      <Link to="/Catalog" onClick={()=> changeCategory("tops and vests")|| setNav(!nav) }>ТОПЫ И ЖИЛЕТЫ</Link>
                     </li>
                   </ul>
                   <div onClick={() => setNav(!nav)} className='mobile_btn'>
