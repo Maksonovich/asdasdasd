@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 
 const toggleStyle = {
     position : 'absolute' ,
-    top : '15px' 
+    top : '16px' 
 }
 
 const Toggle = ({ value, onChange }) => (
