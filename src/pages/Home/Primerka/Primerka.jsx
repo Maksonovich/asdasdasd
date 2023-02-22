@@ -7,17 +7,29 @@ const Primerka = () => {
   const [phone, setPhone] = useState("");
   const [time, setTime] = useState("");
   const [comment, setComment] = useState("");
-  function f2() {
-    setName("");
-    setPhone("");
-    setTime("");
-    setComment("");
+
+  let url = 'http://localhost:3002/showRoom'
+
+  const handleSubmit = (e) => {
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify({
+        name: e.target[0].value,
+        phone: e.target[1].value,
+        time: e.target[2].value,
+        comment: e.target[3].value
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(res => res.json())
   }
+
   return (
     <section className="Primerka">
       <div className="container">
         <div className="Primerka_inner">
-          <form action="/djkama">
+          <form action="/djkama" onSubmit={handleSubmit}>
             <div className="PrimerkaIcon">
               <img src={PrimerkaIcon} alt="" />
             </div>
@@ -43,7 +55,7 @@ const Primerka = () => {
                 onChange={(e) => setTime(e.target.value)}
                 value={time}
                 className="Primerka_input2"
-                type="text"
+                type="date"
                 placeholder="ВВЕДИТЕ УДОБНОЕ ВРЕМЯ"
                 required
               />
@@ -57,8 +69,7 @@ const Primerka = () => {
                 placeholder="ДОБАВИТЬ КОММЕНТАРИЙ"
               />
 
-              <button onChange={f2} className="Primerka_button" type="submit">
-                {" "}
+              <button className="Primerka_button" type="submit">
                 ОТПРАВИТЬ{" "}
               </button>
             </div>
