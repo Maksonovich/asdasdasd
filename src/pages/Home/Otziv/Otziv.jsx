@@ -143,7 +143,7 @@ const Otziv = () => {
                 </div>
             </div>
             }
-            <div className="Otziv_button" onClick={() => isOpen(!open)}>СМОТРЕТЬ ВСЕ</div>
+            <div className="Otziv_button" onClick={() => isOpen(!open)}>{`${open ? 'ЗАКРЫТЬ' : 'СМОТРЕТЬ ВСЁ'}`}</div>
         </div> 
     </section>
   )
