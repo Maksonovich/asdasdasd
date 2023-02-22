@@ -59,9 +59,9 @@ const Context = (props) => {
     }
 
 
-    return <CustomContext.Provider value={value}>
+    return <CustomContext.Consumer.Provider value={value}>
         {props.children}
-    </CustomContext.Provider>
+    </CustomContext.Consumer.Provider>
 }
 
-export default Context
+export default Context;
