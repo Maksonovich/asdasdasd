@@ -82,7 +82,7 @@ const Decoration = () => {
         {task.length !== 0 && (
           <div className="Making__blocks">
             <div className="Making__blocks-left">
-              <form action="/djkama">
+              <form action="/Thanks">
                 <div className="Making__blocks-left_title">
                   ВЫБЕРИТЕ СПОСОБ ДОСТАВКИ
                 </div>

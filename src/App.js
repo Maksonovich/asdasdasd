@@ -39,6 +39,7 @@ import Modal26 from './pages/modal/modal26';
 import Modal28 from './pages/modal/modal28';
 import Decoration from './pages/Decoration/decoration';
 import { useEffect, useState } from 'react';
+import ModalComplete from './pages/modal/complete';
 
 function App() {
 
@@ -139,6 +140,10 @@ function App() {
               <Route
               path='djkama'
               element={<ModalKama/>}
+              />
+              <Route
+              path='Thanks'
+              element={<ModalComplete/>}
               />
               <Route
                 path='/MakeAnOrder'
