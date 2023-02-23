@@ -20,7 +20,6 @@ const Basket = () => {
                 <div className='basket__content-line'></div>
                 <div className='basket__content-x' onClick={() => setBasket(!basket)}></div>
             </div>
-            <div className='basket__content-optom'><h4>Только оптом по 3 штуки!!!</h4></div>
             {task.length !== 0 ?
                 task.map((item) => (
                     <BasketItem item={item} />
@@ -35,8 +34,8 @@ const Basket = () => {
                 }
               </div>
             </div>}
-            {task.length !== 0 && <Link to="/Decoration" className='basket__content-oform'>ОФОРМИТЬ ЗАКАЗ</Link>}
-            {task.length !== 0 && <Link  to="/Decoration" className='basket__content-oform-two'>ЗАКАЗАТЬ В ОДИН КЛИК</Link>}
+            {task.length !== 0 && <Link onClick={() => setBasket(!basket)} to="/Decoration" className='basket__content-oform'>ОФОРМИТЬ ЗАКАЗ</Link>}
+            {task.length !== 0 && <Link onClick={() => setBasket(!basket)} to="/Decoration" className='basket__content-oform-two'>ЗАКАЗАТЬ В ОДИН КЛИК</Link>}
             
     </div>
     </>

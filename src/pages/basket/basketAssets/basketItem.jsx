@@ -2,15 +2,20 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import {
   addPrice,
+  changeBasket,
   deletePrice,
   deleteTask,
 } from "../../../redux/reducers/dataCrad";
 
 const BasketItem = ({ item }) => {
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
 
+  const handleSizeChange = (size) => {
+    dispatch(changeBasket(item.id, size))
+  };
+  
   return (
-    <div className="basketItem" key={item.id}>
+    <div className="basketItem" key={item.id} onMouseMove={() => handleSizeChange(item.size)}>
       <div className="basketItem__items">
         <div className="basketItem__img">
           <img src={item.img} alt="some image" />
@@ -27,21 +32,21 @@ const BasketItem = ({ item }) => {
               <button
                 className="basketItem__info-bottom_minus"
                 onClick={() => {
-                  dispath(deletePrice(item.id));
+                  dispatch(deletePrice(item.id));
                 }}
               ></button>
               <div className="basketItem__info-bottom_center">{item.count}</div>
               <button
                 className="basketItem__info-bottom_plus"
                 onClick={() => {
-                  dispath(addPrice(item.id));
+                  dispatch(addPrice(item.id)) && handleSizeChange(item.size)
                 }}
               ></button>
             </div>
             <div
               className="basketItem__info-delete"
               onClick={() => {
-                dispath(deleteTask(item.id));
+                dispatch(deleteTask(item.id));
               }}
             >
               Удалить

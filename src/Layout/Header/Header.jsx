@@ -268,7 +268,7 @@ const Header = () => {
           </li>
         </nav>
       </div>
-      <Basket />
+      <Basket/>
     </header>
   );
 };

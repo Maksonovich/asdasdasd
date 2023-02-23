@@ -5,7 +5,7 @@ export default function App() {
     return (
         <div className="App">
             <FloatingWhatsApp
-                phoneNumber="123456789"
+                phoneNumber="+996555204055"
                 accountName="Foo"
                 allowEsc
                 allowClickAway

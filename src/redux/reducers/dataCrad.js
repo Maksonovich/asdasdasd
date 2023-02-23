@@ -17,7 +17,7 @@ export default (state = coin, action) => {
     case "ADD_PRICE": {
       return {
         ...state,
-        task: state.task.map((el) => {
+        task: state.task.filter((el) => {
           if (el.id === action.id) {
             el.price = el.price + el.underPrice;
             el.count = el.count + 1;
@@ -29,7 +29,7 @@ export default (state = coin, action) => {
     case "MINUS_PRICE": {
       return {
         ...state,
-        task: state.task.map((item) => {
+        task: state.task.filter((item) => {
           if (item.id === action.id) {
             item.price = item.price - item.underPrice;
             item.count = item.count - 1;
