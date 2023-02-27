@@ -11,9 +11,12 @@ const DecorationItem = ({ item }) => {
     dispatch(changeBasket(item.id, size));
     setList(!list)
   };
+  const handleSizeMove = (size) => {
+    dispatch(changeBasket(item.id, size));
+  };
 
   return (
-    <div className="makingItem">
+    <div className="makingItem" onMouseMove={() => handleSizeMove(item.size)}>
       <a className="makingItem-link">
         <img src={item.img} alt="image" />
       </a>
