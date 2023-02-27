@@ -492,6 +492,9 @@
             }
             &:last-child {
               flex-grow: 1;
+              @media(max-width: 376px) {
+                padding-left: 14px;
+              }
             }
           }
         }
