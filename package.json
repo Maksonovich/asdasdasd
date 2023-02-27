@@ -43,6 +43,7 @@
     "yup": "^1.0.0"
   },
   "scripts": {
+    "local": "json-server -w local.json --port 3002",
     "server": "json-server -w db.json --port 3001",
     "start": "react-scripts start",
     "build": "react-scripts build",

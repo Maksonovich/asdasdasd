@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { aboutData } from '../../Data/Data'
 import Icon from '../../assets/About/6.svg'
 import Image1 from '../../assets/About/1-img.png'
@@ -6,6 +6,30 @@ import Image2 from '../../assets/About/2-img.png'
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 const Brand = () => {
+
+
+    const [name, setName] = useState("")
+    const [data, setData] = useState("");
+    const [mobileNumber, setMobileNumber] = useState("");
+    const [message, setMessage] = useState("");
+
+    let url = 'http://localhost:3002/showRoom'
+
+    let handleSubmit = async (e) => {
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                name: e.target[0].value,
+                mobileNumber: e.target[1].value,
+                data: e.target[2].value,
+                message: e.target[3].value
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    };
+
     return (
         <section className='about'>
             <div className='container'>
@@ -86,17 +110,25 @@ const Brand = () => {
                         <div className='registr-block'>
                             <img className='registr-icon' src={Icon} alt='' />
                             <h4 className='registr-title'>ЗАПИСАТЬСЯ НА ПРИМЕРКУ В ШОУРУМЕ</h4>
-                            <form className='registr-form' action='/djkama'>
+                            <form className='registr-form' action='/djkama' onSubmit={handleSubmit}>
                                 <div className='registr-form-sections'>
-                                    <input required type='text' placeholder='ВВЕДИТЕ ИМЯ' />
+                                    <input value={name} required type='text'
+                                        onChange={(e) => setName(e.target.value)}
+                                        placeholder='ВВЕДИТЕ ИМЯ' />
                                 </div>
                                 <div className='registr-form-sections'>
-                                    <input required type='number' placeholder='ВВЕДИТЕ ТЕЛЕФОН' />
+                                    <input required value={mobileNumber} type='number'
+                                        onChange={(e) => setMobileNumber(e.target.value)}
+                                        placeholder='ВВЕДИТЕ ТЕЛЕФОН' />
                                 </div>
                                 <div className='registr-form-sections'>
-                                    <input required type='datetime-local' placeholder='ВВЕДИТЕ УДОБНОЕ ВРЕМЯ' />
+                                    <input required value={data} type='datetime-local'
+                                        onChange={(e) => setData(e.target.value)}
+                                        placeholder='ВВЕДИТЕ УДОБНОЕ ВРЕМЯ' />
                                 </div>
-                                <textarea className='registr-form-com' name="textArea" placeholder='ДОБАВИТЬ КОММЕНТАРИЙ' id=''>
+                                <textarea className='registr-form-com' value={message} name="textArea"
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    placeholder='ДОБАВИТЬ КОММЕНТАРИЙ' id=''>
                                 </textarea>
                                 <button className='registr-form-btn' type='submit'>ОТПРАВИТЬ</button>
                             </form>
