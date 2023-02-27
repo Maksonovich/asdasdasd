@@ -3,14 +3,8 @@ import { TbHanger } from "react-icons/tb";
 
 const ContactQuestion = () => {
   const iconStyle = {
-    width: "300px",
-    height: "60px",
-    padding: "20px",
-  };
-
-  const inputStyle = {
-    fill: "#C0A78F",
-    fontSize: "30px",
+    fill:"#C0A78F",
+    fontSize:"30px"
   };
 
   const [name, setName] = useState("");
@@ -47,7 +41,6 @@ const ContactQuestion = () => {
         <form onSubmit={handleSubmit}>
           <div className="formInpInfo">
             <input
-              style={inputStyle}
               value={name}
               type="text"
               placeholder="Введите имя"
@@ -67,7 +60,6 @@ const ContactQuestion = () => {
               value={data}
               type="date"
               style={{
-                width: "600px",
                 height: "60px",
                 padding: "20px",
               }}
@@ -75,7 +67,7 @@ const ContactQuestion = () => {
               onChange={(e) => setData(e.target.value)}
             />
           </div>
-          <div style={{ marginTop: "30px", display: "flex" }}>
+          <div style={{ marginTop: "30px", display: "flex" }} className="formInpInfo-aidar2">
             <textarea
               type="text"
               style={{
