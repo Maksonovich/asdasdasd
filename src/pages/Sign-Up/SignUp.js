@@ -35,12 +35,18 @@ const SignUp = () => {
                         <Link to="/">Войди!</Link>
                     </div>
                     <button
+                        className="glow-effect"
                         onClick={() => {
                             return (
                                 <Navigate to='/' />
                             )
                         }}
-                    >Зарегаться</button>
+                    >Зарегаться
+                    <svg className="glow-container">
+                        <rect pathLength="100" strokeLinecap="round" className="glow-blur"></rect>
+                        <rect pathLength="100" strokeLinecap="round" className="glow-line"></rect>
+                    </svg>
+                    </button>
                     {err && <span>Что-то пошло не так...</span>}
                 </form>
             </div>

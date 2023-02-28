@@ -34,8 +34,14 @@ const SignIn = () => {
                         <Link to="/signup">Зарегайся!</Link>
                     </div>
                     <button
-                        
-                    >Войти</button>
+                        className="glow-effect"
+                        data-glow-animation="false"
+                    >Войти
+                    <svg className="glow-container">
+                        <rect pathLength="100" strokeLinecap="round" className="glow-blur"></rect>
+                        <rect pathLength="100" strokeLinecap="round" className="glow-line"></rect>
+                    </svg>
+                    </button>
                     {err && <span>Что-то Пошло Не Так! ☹</span>}
                 </form>
             </div>
