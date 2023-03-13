@@ -30,31 +30,31 @@ const Header = () => {
                   <ul className={nav ? ["menu", "active"].join(" ") : ["menu"]}>
                     <span className="CATEGORY">КАТЕГОРИИ</span>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("novelties")|| setNav(!nav) }>НОВИНКИ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("novelties") || setNav(!nav)}>НОВИНКИ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("skirt")|| setNav(!nav) }>ЮБКИ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("skirt") || setNav(!nav)}>ЮБКИ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("tuxedo")|| setNav(!nav) }>СМОКИНГ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("tuxedo") || setNav(!nav)}>СМОКИНГ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("suits")|| setNav(!nav) }>КОСТЮМЫ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("suits") || setNav(!nav)}>КОСТЮМЫ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("accessories")|| setNav(!nav) }>АКССЕСУАРЫ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("accessories") || setNav(!nav)}>АКССЕСУАРЫ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("trousers")|| setNav(!nav) }>БРЮКИ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("trousers") || setNav(!nav)}>БРЮКИ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("blouses")|| setNav(!nav) }>БЛУЗКИ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("blouses") || setNav(!nav)}>БЛУЗКИ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("dresses")|| setNav(!nav) }>ПЛАТЬЯ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("dresses") || setNav(!nav)}>ПЛАТЬЯ</Link>
                     </li>
                     <li>
-                      <Link to="/Catalog" onClick={()=> changeCategory("tops and vests")|| setNav(!nav) }>ТОПЫ И ЖИЛЕТЫ</Link>
+                      <Link to="/Catalog" onClick={() => changeCategory("tops and vests") || setNav(!nav)}>ТОПЫ И ЖИЛЕТЫ</Link>
                     </li>
                   </ul>
                   <div onClick={() => setNav(!nav)} className="mobile_btn">
@@ -67,7 +67,7 @@ const Header = () => {
                 </div>
               </li>
               <li className="aidar-icon">
-                <a href="#">
+                <a href="https://instagram.com/atlantissenki?igshid=ZDdkNTZiNTM=">
                   <svg
                     className="burger-Menu"
                     width="18"
@@ -234,7 +234,7 @@ const Header = () => {
         </nav>
         <nav className="header__nav-bottom">
           <li>
-            <Link to="Catalog" onClick={() =>  changeCategory("novelties")} className="header__nav-bottom_link">
+            <Link to="Catalog" onClick={() => changeCategory("novelties")} className="header__nav-bottom_link">
               НОВИНИКИ
             </Link>
           </li>
@@ -268,7 +268,7 @@ const Header = () => {
           </li>
         </nav>
       </div>
-      <Basket/>
+      <Basket />
     </header>
   );
 };

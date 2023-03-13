@@ -1,5 +1,6 @@
 //IMPORT REACT APP PACKAGES
 import { Route, Routes } from 'react-router';
+import { useEffect, useState } from 'react';
 
 //IMPORT APP PAGES
 import Layout from './Layout/Layout';
@@ -17,7 +18,6 @@ import Modal24 from './pages/modal/modal24';
 import Review from './pages/Review/Review';
 
 //IMPORT CATALOG
-
 import Catalog from './pages/Catalog/Catalog';
 
 //IMPORT DOP SCSS CSS PACKAGES
@@ -38,7 +38,6 @@ import Makesense from './pages/MakeAnOrder/Makesense';
 import Modal26 from './pages/modal/modal26';
 import Modal28 from './pages/modal/modal28';
 import Decoration from './pages/Decoration/decoration';
-import { useEffect, useState } from 'react';
 import ModalComplete from './pages/modal/complete';
 
 function App() {

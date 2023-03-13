@@ -130,8 +130,8 @@ const Brand = () => {
                                     onChange={(e) => setMessage(e.target.value)}
                                     placeholder='ДОБАВИТЬ КОММЕНТАРИЙ' id=''>
                                 </textarea>
-                                <button className='registr-form-btn' type='submit'>ОТПРАВИТЬ</button>
                             </form>
+                            <button className='registr-form-btn' type='submit'>ОТПРАВИТЬ</button>
                             <p className='registr-p'>Поля отмеченные “*” обязательны для заполнения</p>
                             {/* <input type='file'/> */}
                         </div>

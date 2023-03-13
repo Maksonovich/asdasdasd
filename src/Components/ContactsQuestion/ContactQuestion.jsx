@@ -3,8 +3,8 @@ import { TbHanger } from "react-icons/tb";
 
 const ContactQuestion = () => {
   const iconStyle = {
-    fill:"#C0A78F",
-    fontSize:"30px"
+    fill: "#C0A78F",
+    fontSize: "30px"
   };
 
   const [name, setName] = useState("");
@@ -71,10 +71,9 @@ const ContactQuestion = () => {
             <textarea
               type="text"
               style={{
-                height: "100px",
                 resize: "none",
                 textTransform: "uppercase",
-                padding: "17.5px",
+                padding: "15px",
                 display: "block",
                 flexGrow: "1",
               }}
@@ -82,17 +81,18 @@ const ContactQuestion = () => {
               onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
-            <button
-              style={{
-                width: "182px",
-                height: "60px",
-              }}
-              type="submit"
-              className="commentConfirmButton"
-            >
-              ЗАПИСАТЬСЯ
-            </button>
           </div>
+          <button
+            style={{
+              width: "182px",
+              height: "60px",
+              marginTop : "15px"
+            }}
+            type="submit"
+            className="commentConfirmButton"
+          >
+            ЗАПИСАТЬСЯ
+          </button>
         </form>
       </div>
     </div>

@@ -8,13 +8,12 @@ import Star from './Star/Star'
 import Otziv from './Otziv/Otziv'
 import Instagram from './Instagram/Instagram';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
-import FabFloat from '../../Components/FabFloat';
+import Fab from '../../Components/Fab'
 
 const Home = () => {
 
     return (
         <main className='page'>
-            <FabFloat />
             <FloatingWhatsApp />
             <Begin />
             <Collection />

@@ -32,7 +32,7 @@ const SignUp = () => {
                     <input required type="password" placeholder="Придумай новый пароль" />
                     <div className="links">
                         <Link to="/signin">У Тебя Есть Аккаунт?</Link>
-                        <Link to="/">Войди!</Link>
+                        <p>Войди!!!</p>
                     </div>
                     <button
                         className="glow-effect"

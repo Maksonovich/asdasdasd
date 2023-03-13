@@ -85,7 +85,7 @@ const HeaderStatic = () => {
                 </div>
               </li>
               <li>
-                <Link className="adapt_icon1" to="Home">
+                <Link className="adapt_icon1" to="https://instagram.com/atlantissenki?igshid=ZDdkNTZiNTM=">
                   <svg
                     width="18"
                     height="19"

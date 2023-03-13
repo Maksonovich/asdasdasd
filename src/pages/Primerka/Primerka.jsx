@@ -221,11 +221,12 @@ const Primerka = () => {
                     type="text"
                     placeholder="ДОБАВИТЬ КОММЕНТАРИЙ"
                   />
-                  <form action="/djkama"><button onClick={f2} className="form_button" type="submit">
-                    {" "}
-                    ЗАПИСАТЬСЯ{" "}
-                  </button></form>
-                  
+                  <form action="/djkama">
+                    <button onClick={f2} className="form_button" type="submit">
+                      {" "}
+                      ЗАПИСАТЬСЯ{" "}
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>

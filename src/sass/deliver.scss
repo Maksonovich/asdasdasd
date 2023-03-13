@@ -226,9 +226,10 @@
                 background-color: transparent;
                 resize: none;
                 flex-grow: 1;
-                height: 100px;
+                max-height: 60px;
                 font-weight: 500;
                 font-size: 13px;
+                width: 600px;
                 text-transform: uppercase;
                 @media(max-width: 1084px) {
                     width: 100%;
@@ -245,14 +246,15 @@
             outline: none;
             background: none;
             border: 1px solid #000000;
-            border-left: none;
             font-family: 'FuturaBookC';
             font-weight: 600;
             line-height: 25px;
             font-size: 13px;
             letter-spacing: 0.1em;
+            // transform: translateX(-530px) translateY(50px); 
             text-transform: uppercase;
             transition: all 0.3s ease-in;
+            margin-top: 25px;
             @media(max-width:1084px) {
                 border-top: none;
                 margin-left: auto;

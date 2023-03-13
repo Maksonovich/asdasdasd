@@ -3,7 +3,6 @@ import { createContext, useState } from "react";
 
 export const CustomContext = createContext()
 
-
 const Context = (props) => {
     const [category, setCategory] = useState('')
     const [products, setProducts] = useState({ data: [], error: '' })
@@ -17,8 +16,6 @@ const Context = (props) => {
     const [aidar2, setAidar2] = useState(false)
     const [aidar3, setAidar3] = useState(false)
     const [aidar4, setAidar4] = useState(false)
-
-
 
     const changeCategory = (value) => {
         setCategory(value)
