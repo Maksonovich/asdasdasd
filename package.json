@@ -47,8 +47,8 @@
   "scripts": {
     "dev": "concurrently \"npm run start\" \"npm run server\" \" npm run local \"",
     "local": "json-server -w local.json --port 3002",
-    "server": "json-server -w db.json --port 3001",
-    "start": "react-scripts start --port 5555",
+    "server": "json-server -w db.json --port 3003",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
